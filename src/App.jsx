@@ -21,6 +21,8 @@ function App() {
         <Gameboard 
           score={score}
           setScore={setScore}
+          topScore={topScore}
+          setTopScore={setTopScore}
         />
       </div>
     </>
