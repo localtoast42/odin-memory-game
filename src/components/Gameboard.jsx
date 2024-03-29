@@ -8,13 +8,14 @@ export default function Gameboard( { score, setScore } ) {
 
     function handleClick(e) {
         console.log(e.target.value);
-        // if (selectedCardIds.includes(e.target.value)) {
-        //     setScore(0);
-        //     setSelectedCardIds([]);
-        // } else {
-        //     setScore(score + 1);
-        //     setSelectedCardIds(selectedCardIds.push(e.target.value));
-        // }
+        if (selectedCardIds.includes(e.target.value)) {
+            setScore(0);
+            setSelectedCardIds([]);
+        } else {
+            setScore(score + 1);
+            const newSelectedCardIds = [...selectedCardIds, e.target.value];
+            setSelectedCardIds(newSelectedCardIds);
+        }
     }
 
     return (
