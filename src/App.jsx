@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Scoreboard from './components/Scoreboard';
+import Gameboard from './components/Gameboard';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -17,6 +18,7 @@ function App() {
           <h1>Memory Game</h1>
           <h2>Test your memory.</h2>
         </div>
+        <Gameboard />
       </div>
     </>
   )
