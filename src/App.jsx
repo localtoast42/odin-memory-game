@@ -9,12 +9,12 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='header'>
         <Scoreboard 
           score={score}
           topScore={topScore}
         />
-        <div>
+        <div className='title'>
           <h1>Memory Game</h1>
           <h2>Test your memory.</h2>
         </div>
