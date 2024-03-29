@@ -1,12 +1,9 @@
 import '../styles/Card.css'
 
-export default function Card() {
+export default function Card({ cardId, onClick }) {
     return (
-        <>
-            <div className="card">
-                <img src="" alt="" />
-                <h3>Card</h3>
-            </div>
-        </>
+        <button className="card" onClick={onClick} value={cardId}>
+            Card
+        </button>
     )
 }
