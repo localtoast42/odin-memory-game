@@ -2,7 +2,7 @@ import { useState } from 'react'
 import '../styles/Gameboard.css'
 import Card from "./Card"
 
-export default function Gameboard( { score, setScore } ) {
+export default function Gameboard( { score, setScore, topScore, setTopScore } ) {
 
     const [selectedCardIds, setSelectedCardIds] = useState([]);
 
@@ -11,6 +11,9 @@ export default function Gameboard( { score, setScore } ) {
         if (selectedCardIds.includes(e.target.value)) {
             setScore(0);
             setSelectedCardIds([]);
+            if (score > topScore) {
+                setTopScore(score);
+            }
         } else {
             setScore(score + 1);
             const newSelectedCardIds = [...selectedCardIds, e.target.value];
