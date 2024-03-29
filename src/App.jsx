@@ -18,13 +18,13 @@ function App() {
           <h1>Memory Game</h1>
           <h2>Test your memory.</h2>
         </div>
-        <Gameboard 
-          score={score}
-          setScore={setScore}
-          topScore={topScore}
-          setTopScore={setTopScore}
-        />
       </div>
+      <Gameboard 
+        score={score}
+        setScore={setScore}
+        topScore={topScore}
+        setTopScore={setTopScore}
+      />
     </>
   )
 }
