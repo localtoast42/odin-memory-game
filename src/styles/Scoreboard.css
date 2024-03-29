@@ -1,0 +1,14 @@
+.scoreboard {
+    display: grid;
+    grid-template-columns: 125px 30px;
+    align-items: center;
+    text-align: right;
+}
+
+.scoreboard > h3 {
+    margin: 0;
+}
+
+.scoreboard > .score {
+    text-align: center;
+}
