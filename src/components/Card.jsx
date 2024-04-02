@@ -1,9 +1,8 @@
 import '../styles/Card.css'
 import { useState, useEffect } from 'react'
 
-export default function Card({ cardId, onClick }) {
+export default function Card({ cardId, pokemonName, onClick }) {
 
-    const pokemonName = 'pikachu';
     const [photoURL, setPhotoURL] = useState('');
 
     useEffect(() => {

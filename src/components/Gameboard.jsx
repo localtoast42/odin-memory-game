@@ -33,50 +33,62 @@ export default function Gameboard( { score, setScore, topScore, setTopScore } ) 
             <div className='gameboard'>
                 <Card 
                     cardId='1'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='2'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='3'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='4'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='5'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='6'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='7'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='8'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='9'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='10'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='11'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
                 <Card 
                     cardId='12'
+                    pokemonName='pikachu'
                     onClick={handleClick}
                 />
             </div>
