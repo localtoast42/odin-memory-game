@@ -26,7 +26,7 @@ export default function Gameboard( { score, setScore, topScore, setTopScore } ) 
 
     function handleClick(e) {
         console.log(e.currentTarget.value);
-        if (selectedCardIds.includes(e.target.value)) {
+        if (selectedCardIds.includes(e.currentTarget.value)) {
             setScore(0);
             setSelectedCardIds([]);
             if (score > topScore) {
@@ -34,7 +34,7 @@ export default function Gameboard( { score, setScore, topScore, setTopScore } ) 
             }
         } else {
             setScore(score + 1);
-            const newSelectedCardIds = [...selectedCardIds, e.target.value];
+            const newSelectedCardIds = [...selectedCardIds, e.currentTarget.value];
             setSelectedCardIds(newSelectedCardIds);
         }
     }
