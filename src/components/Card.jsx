@@ -13,7 +13,7 @@ export default function Card({ pokemonName, onClick }) {
             .then((data) => {
                 setPhotoURL(data['sprites']['other']['official-artwork']['front_default']);
             });
-    }, []);
+    }, [pokemonName]);
 
     return (
         <button className="card" onClick={onClick} value={pokemonName}>
