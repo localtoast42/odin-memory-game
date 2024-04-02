@@ -21,7 +21,7 @@ export default function Gameboard( { score, setScore, topScore, setTopScore } ) 
     ];
 
     const cardList = pokemon.map((pokemon) => {
-        return <Card key={pokemon} pokemonName={pokemon} onclick={handleClick}/>
+        return <Card key={pokemon} pokemonName={pokemon} onClick={handleClick}/>
     })
 
     function handleClick(e) {
