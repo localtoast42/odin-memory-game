@@ -1,7 +1,7 @@
 import '../styles/Card.css'
 import { useState, useEffect } from 'react'
 
-export default function Card({ cardId, pokemonName, onClick }) {
+export default function Card({ pokemonName, onClick }) {
 
     const [photoURL, setPhotoURL] = useState('');
 
@@ -16,7 +16,7 @@ export default function Card({ cardId, pokemonName, onClick }) {
     }, []);
 
     return (
-        <button className="card" onClick={onClick} value={cardId}>
+        <button className="card" onClick={onClick} value={pokemonName}>
             <img src={photoURL} alt='' height='150px'/>
             {pokemonName.toUpperCase()}
         </button>

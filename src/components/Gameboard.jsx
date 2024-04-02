@@ -5,6 +5,24 @@ import Card from "./Card"
 export default function Gameboard( { score, setScore, topScore, setTopScore } ) {
 
     const [selectedCardIds, setSelectedCardIds] = useState([]);
+    const pokemon = [
+        'pikachu', 
+        'squirtle', 
+        'bulbasaur',
+        'charmander',
+        'eevee',
+        'psyduck',
+        'meowth',
+        'jigglypuff',
+        'geodude',
+        'pidgey',
+        'diglett',
+        'abra',
+    ];
+
+    const cardList = pokemon.map((pokemon) => {
+        return <Card key={pokemon} pokemonName={pokemon} onclick={handleClick}/>
+    })
 
     function handleClick(e) {
         console.log(e.target.value);
@@ -31,66 +49,7 @@ export default function Gameboard( { score, setScore, topScore, setTopScore } ) 
     return (
         <>
             <div className='gameboard'>
-                <Card 
-                    cardId='1'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='2'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='3'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='4'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='5'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='6'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='7'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='8'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='9'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='10'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='11'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
-                <Card 
-                    cardId='12'
-                    pokemonName='pikachu'
-                    onClick={handleClick}
-                />
+                {cardList}
             </div>
         </>
     )
