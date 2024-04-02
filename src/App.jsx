@@ -16,7 +16,7 @@ function App() {
         />
         <div className='title'>
           <h1>Memory Game</h1>
-          <h2>Test your memory.</h2>
+          <h2>Try to click all 12 images without repeating!</h2>
         </div>
       </div>
       <Gameboard 
