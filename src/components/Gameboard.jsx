@@ -25,7 +25,7 @@ export default function Gameboard( { score, setScore, topScore, setTopScore } ) 
     })
 
     function handleClick(e) {
-        console.log(e.target.value);
+        console.log(e.currentTarget.value);
         if (selectedCardIds.includes(e.target.value)) {
             setScore(0);
             setSelectedCardIds([]);
