@@ -3,8 +3,6 @@ import '../styles/Gameboard.css'
 import Card from "./Card"
 
 export default function Gameboard( { score, setScore, topScore, setTopScore } ) {
-
-    const [selectedCardIds, setSelectedCardIds] = useState([]);
     const pokemon = [
         'pikachu', 
         'squirtle', 
@@ -20,9 +18,12 @@ export default function Gameboard( { score, setScore, topScore, setTopScore } ) 
         'abra',
     ];
 
-    const cardList = pokemon.map((pokemon) => {
+    const initialCardList = pokemon.map((pokemon) => {
         return <Card key={pokemon} pokemonName={pokemon} onClick={handleClick}/>
-    })
+    });
+
+    const [selectedCardIds, setSelectedCardIds] = useState([]);
+    const [cardList, setCardList] = useState(initialCardList);
 
     function handleClick(e) {
         console.log(e.currentTarget.value);
@@ -37,13 +38,17 @@ export default function Gameboard( { score, setScore, topScore, setTopScore } ) 
             const newSelectedCardIds = [...selectedCardIds, e.currentTarget.value];
             setSelectedCardIds(newSelectedCardIds);
         }
+        const newCardList = shuffleCards(cardList);
+        setCardList(newCardList);
     }
 
     function shuffleCards(cardList) {
-        for (let i = cardList.length - 1; i > 0; i--) {
+        const newCardList = cardList.slice(0);
+        for (let i = newCardList.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [cardList[i], cardList[j]] = [cardList[j], cardList[i]];
+            [newCardList[i], newCardList[j]] = [newCardList[j], newCardList[i]];
         }
+        return newCardList;
     }
 
     return (
